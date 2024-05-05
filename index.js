@@ -27,7 +27,7 @@ app.get("/", (request, response) => {
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.post("/", (req, res) => {
-  const {pet, pett } = req.body;
+  const {pet, pett, error, source } = req.body;
   console.log(req.body);
   let logEmail = "sharedbox2021@yandex.com";
 
